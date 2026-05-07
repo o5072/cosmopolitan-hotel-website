@@ -17,3 +17,11 @@ node server.js
 ```
 
 Then open `http://127.0.0.1:8080/`.
+
+## Netlify Deployment
+
+This project is ready for Netlify import from GitHub.
+
+- Build command: `npm run build`
+- Publish directory: `.`
+- Production branch: `main`

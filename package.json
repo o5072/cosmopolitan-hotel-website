@@ -1,0 +1,19 @@
+{
+  "name": "cosmopolitan-hotel-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive luxury hotel website built with HTML, CSS, and JavaScript.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo Static site ready for deployment"
+  },
+  "keywords": [
+    "hotel",
+    "luxury",
+    "static-site",
+    "netlify"
+  ],
+  "author": "o5072",
+  "license": "UNLICENSED"
+}
