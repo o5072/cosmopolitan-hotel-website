@@ -41,5 +41,5 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(port, host, () => {
-  console.log(`Aurelia Grand is running at http://${host}:${port}/`);
+  console.log(`Cosmopolitan Luxury Hotel is running at http://${host}:${port}/`);
 });

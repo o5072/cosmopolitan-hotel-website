@@ -13,7 +13,7 @@ if (navToggle && siteNav) {
 }
 
 const revealElements = document.querySelectorAll(
-  ".feature, .room-card, .summary-panel, .step-form, .payment-form, .story-panel, .contact-form, .map-panel, .section-heading, .page-hero"
+  ".feature, .room-card, .event-card, .summary-panel, .step-form, .payment-form, .story-panel, .contact-form, .map-panel, .section-heading, .page-hero"
 );
 
 if ("IntersectionObserver" in window) {
@@ -58,7 +58,7 @@ if (bookingForm) {
   const summaryTotal = document.querySelector("#summaryTotal");
   const prices = {
     "Deluxe King": 420,
-    "Aurelia Suite": 790,
+    "Cosmopolitan Suite": 790,
     "Sky Penthouse": 1850
   };
   let currentStep = 0;

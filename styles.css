@@ -283,7 +283,8 @@ h3 {
 .about-grid,
 .payment-layout,
 .booking-layout,
-.split-section {
+.split-section,
+.event-grid {
   display: grid;
   gap: 22px;
 }
@@ -316,6 +317,7 @@ h3 {
 .contact-form,
 .map-panel,
 .section-heading,
+.event-card,
 .page-hero {
   opacity: 0;
   transform: translateY(24px);
@@ -376,6 +378,86 @@ h3 {
 
 .image-stack img:last-child {
   height: 360px;
+}
+
+.events-section {
+  position: relative;
+}
+
+.event-grid {
+  grid-template-columns: 1.15fr 0.92fr 0.92fr;
+}
+
+.event-card {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-strong);
+  box-shadow: var(--shadow);
+}
+
+.event-card::before,
+.event-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.event-card::before {
+  background: var(--event-image) center/cover;
+  transition: transform 800ms ease;
+}
+
+.event-card::after {
+  background:
+    linear-gradient(180deg, rgba(8, 10, 15, 0.08), rgba(8, 10, 15, 0.88)),
+    linear-gradient(135deg, rgba(103, 232, 216, 0.2), transparent 42%, rgba(216, 183, 106, 0.18));
+}
+
+.event-card:hover::before {
+  transform: scale(1.06);
+}
+
+.event-content {
+  position: absolute;
+  inset: auto 20px 20px;
+  z-index: 2;
+  padding: 20px;
+  border: 1px solid rgba(248, 243, 232, 0.18);
+  border-radius: var(--radius);
+  background: rgba(8, 10, 15, 0.56);
+  backdrop-filter: blur(16px);
+}
+
+.event-content p {
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.event-content h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.4vw, 2.4rem);
+  line-height: 1.08;
+  font-weight: 500;
+}
+
+.karaoke-event {
+  --event-image: url("https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80");
+}
+
+.hall-event {
+  --event-image: url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80");
+}
+
+.bar-event {
+  --event-image: url("https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=1200&q=80");
 }
 
 .page-shell {
@@ -795,6 +877,7 @@ dd {
   .feature-grid,
   .room-grid,
   .split-section,
+  .event-grid,
   .booking-layout,
   .payment-layout,
   .about-grid {
