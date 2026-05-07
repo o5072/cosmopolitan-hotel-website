@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation | Aurelia Grand Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">AG</span><span>Aurelia Grand</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="booking.html">Booking</a>
+      <a href="payment.html">Payment</a>
+      <a href="about.html">About & Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero compact booking-hero">
+      <p class="eyebrow">Reservation</p>
+      <h1>Plan your stay in a clean, guided flow.</h1>
+      <p>Select dates, guests, a room category, then add guest details before checkout.</p>
+    </section>
+
+    <section class="booking-layout">
+      <form class="step-form" id="bookingForm">
+        <div class="steps" aria-label="Booking progress">
+          <button class="step-dot active" type="button" data-step-target="0">Dates</button>
+          <button class="step-dot" type="button" data-step-target="1">Room</button>
+          <button class="step-dot" type="button" data-step-target="2">Details</button>
+        </div>
+
+        <fieldset class="form-step active" data-step="0">
+          <legend>Travel dates</legend>
+          <label>Check-in<input type="date" name="checkin" required></label>
+          <label>Check-out<input type="date" name="checkout" required></label>
+          <label>Guests<input type="number" name="guests" min="1" max="8" value="2" required></label>
+        </fieldset>
+
+        <fieldset class="form-step" data-step="1">
+          <legend>Room selection</legend>
+          <label>Room category
+            <select name="room" id="roomSelect" required>
+              <option value="Deluxe King">Deluxe King - $420/night</option>
+              <option value="Aurelia Suite">Aurelia Suite - $790/night</option>
+              <option value="Sky Penthouse">Sky Penthouse - $1,850/night</option>
+            </select>
+          </label>
+          <label>Arrival preference
+            <select name="arrival">
+              <option>Airport transfer</option>
+              <option>Valet arrival</option>
+              <option>Private check-in</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset class="form-step" data-step="2">
+          <legend>Personal details</legend>
+          <label>Full name<input type="text" name="name" placeholder="Alex Morgan" required></label>
+          <label>Email<input type="email" name="email" placeholder="alex@example.com" required></label>
+          <label>Phone<input type="tel" name="phone" placeholder="+1 555 0188" required></label>
+          <label>Special requests<textarea name="requests" rows="4" placeholder="Late arrival, champagne, dietary notes"></textarea></label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="button ghost" type="button" id="prevStep">Back</button>
+          <button class="button primary" type="button" id="nextStep">Continue</button>
+          <a class="button primary hidden" id="checkoutLink" href="payment.html">Continue to Payment</a>
+        </div>
+      </form>
+
+      <aside class="summary-panel">
+        <p class="eyebrow">Live summary</p>
+        <h2>Your stay</h2>
+        <dl>
+          <div><dt>Room</dt><dd id="summaryRoom">Deluxe King</dd></div>
+          <div><dt>Guests</dt><dd id="summaryGuests">2</dd></div>
+          <div><dt>Estimated total</dt><dd id="summaryTotal">$420</dd></div>
+        </dl>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Aurelia Grand Hotel</p>
+    <div><a href="rooms.html">Suites</a><a href="payment.html">Payment</a><a href="about.html">Contact</a></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

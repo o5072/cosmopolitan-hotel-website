@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms & Suites | Aurelia Grand Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">AG</span><span>Aurelia Grand</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="booking.html">Booking</a>
+      <a href="payment.html">Payment</a>
+      <a href="about.html">About & Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero compact rooms-hero">
+      <p class="eyebrow">Rooms & suites</p>
+      <h1>Gallery-style sanctuaries for every kind of luxury stay.</h1>
+      <p>From refined deluxe rooms to skyline penthouses, every category includes elevated amenities and intuitive service.</p>
+    </section>
+
+    <section class="section">
+      <div class="room-grid">
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=80" alt="Deluxe king room with soft lighting">
+          <div class="room-body">
+            <div class="room-title">
+              <h2>Deluxe King</h2>
+              <p>$420/night</p>
+            </div>
+            <p>Warm timber, city views, marble bath, and a lounge nook for slow mornings.</p>
+            <div class="amenities">
+              <span>Wi-Fi</span><span>King Bed</span><span>Spa Bath</span><span>Smart TV</span>
+            </div>
+            <a class="button primary full" href="booking.html?room=Deluxe%20King">Reserve</a>
+          </div>
+        </article>
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Luxury suite living area">
+          <div class="room-body">
+            <div class="room-title">
+              <h2>Aurelia Suite</h2>
+              <p>$790/night</p>
+            </div>
+            <p>Separate living room, balcony dining, premium minibar, and evening turndown.</p>
+            <div class="amenities">
+              <span>Balcony</span><span>Dining</span><span>Butler</span><span>Minibar</span>
+            </div>
+            <a class="button primary full" href="booking.html?room=Aurelia%20Suite">Reserve</a>
+          </div>
+        </article>
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Penthouse suite with panoramic view">
+          <div class="room-body">
+            <div class="room-title">
+              <h2>Sky Penthouse</h2>
+              <p>$1,850/night</p>
+            </div>
+            <p>Top-floor residence with private terrace, plunge pool, chef pantry, and dedicated host.</p>
+            <div class="amenities">
+              <span>Terrace</span><span>Pool</span><span>Host</span><span>Pantry</span>
+            </div>
+            <a class="button primary full" href="booking.html?room=Sky%20Penthouse">Reserve</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Aurelia Grand Hotel</p>
+    <div><a href="about.html">Contact</a><a href="booking.html">Reserve</a><a href="index.html">Home</a></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

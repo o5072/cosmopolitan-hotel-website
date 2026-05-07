@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment | Aurelia Grand Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">AG</span><span>Aurelia Grand</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="booking.html">Booking</a>
+      <a href="payment.html">Payment</a>
+      <a href="about.html">About & Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero compact payment-hero">
+      <p class="eyebrow">Secure checkout</p>
+      <h1>Confirm your reservation with a refined payment experience.</h1>
+    </section>
+
+    <section class="payment-layout">
+      <aside class="summary-panel order-summary">
+        <p class="eyebrow">Order summary</p>
+        <h2>Aurelia Suite</h2>
+        <dl>
+          <div><dt>Dates</dt><dd>Jun 18 - Jun 21</dd></div>
+          <div><dt>Guests</dt><dd>2 adults</dd></div>
+          <div><dt>Room subtotal</dt><dd>$2,370</dd></div>
+          <div><dt>Service & taxes</dt><dd>$284</dd></div>
+          <div class="total-row"><dt>Total</dt><dd>$2,654</dd></div>
+        </dl>
+      </aside>
+
+      <form class="payment-form">
+        <label>Name on card<input type="text" placeholder="Alex Morgan" required></label>
+        <label>Card number<input type="text" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" required></label>
+        <div class="form-row">
+          <label>Expiry<input type="text" placeholder="MM / YY" required></label>
+          <label>CVV<input type="password" inputmode="numeric" maxlength="4" placeholder="123" required></label>
+        </div>
+        <label>Billing email<input type="email" placeholder="alex@example.com" required></label>
+        <button class="button primary full" type="submit">Confirm & Pay</button>
+        <p class="secure-note">Encrypted checkout with tokenized card handling and instant confirmation.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Aurelia Grand Hotel</p>
+    <div><a href="booking.html">Booking</a><a href="rooms.html">Suites</a><a href="about.html">Contact</a></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
