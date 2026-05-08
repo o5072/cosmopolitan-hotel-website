@@ -337,7 +337,8 @@ h3 {
 }
 
 .feature {
-  padding: 28px;
+  overflow: hidden;
+  padding: 0;
 }
 
 .feature-icon {
@@ -345,10 +346,30 @@ h3 {
   place-items: center;
   width: 42px;
   height: 42px;
-  margin-bottom: 22px;
+  margin: 24px 28px 22px;
   border: 1px solid rgba(103, 232, 216, 0.34);
   border-radius: 50%;
   color: var(--gold);
+}
+
+.feature-image {
+  height: 210px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+  transition: transform 700ms ease;
+}
+
+.feature:hover .feature-image {
+  transform: scale(1.045);
+}
+
+.feature h3,
+.feature p {
+  padding: 0 28px;
+}
+
+.feature p {
+  padding-bottom: 28px;
 }
 
 .split-section {
